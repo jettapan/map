@@ -1,0 +1,355 @@
+﻿
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>大华企业园区路线图</title>
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 1.7;
+	background-color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+p{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  margin: 0;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  height: 30px;
+}
+h6{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  margin: 0;
+}
+.section-fluid-main{
+  position: relative;
+  display: block;
+  width: calc(100% - 40px);
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1100px;
+  padding-top: 50px;
+  padding-bottom: 90px;
+  -ms-flex-item-align: center;
+  align-self: center;
+  z-index: 3;
+}
+.section-row{
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.section-col-1{
+  position: relative;
+  width: 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 15px;
+}
+.section{
+  position: relative;
+  width: 100%;
+  display: block;
+}
+.section img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+.section-svg-wrap{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: block;
+}
+.section-svg-wrap svg{
+  width: 100%;
+  height: auto;
+  display: block;
+  stroke-width: 5px;
+  stroke: #101f55;
+  filter: drop-shadow(6px 6px 8px rgba(16, 31, 85,.8));
+}
+.section-svg-wrap svg.svg-path{
+  stroke-dashoffset: 0;
+  stroke-dasharray: 3715;
+  transition: stroke-dashoffset 600ms 500ms linear;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked){
+  position: absolute;
+  visibility: hidden;
+}
+
+.goal-btn:checked + label,
+.goal-btn:not(:checked) + label{
+  position: relative;
+  width: 100%;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+  margin: 5px 6px;
+  padding: 12px 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1;
+  border-radius: 4px;
+  background-color: #33a3dc; /*定义按钮未选中的背景颜色*/
+  color: #ffffff; /*定义按钮未选中的文字颜色*/
+  cursor: pointer;
+  transition: all 250ms linear;
+}
+.goal-btn:checked + label{
+  background-color: #ffeba7; /*定义按钮选中的背景颜色*/
+  color: #101e54; /*定义按钮选中的文字颜色*/
+}
+/*关键点位置offset距离终点长array路径总长*/
+#goal-1:checked ~ .section-col-1 .section-svg-wrap svg.svg-path {
+  stroke-dashoffset: 3450;
+  stroke-dasharray: 3715;
+}
+#goal-2:checked ~ .section-col-1 .section-svg-wrap svg.svg-path {
+  stroke-dashoffset: 2700;
+  stroke-dasharray: 3715;
+}
+#goal-3:checked ~ .section-col-1 .section-svg-wrap svg.svg-path {
+  stroke-dashoffset: 2550;
+  stroke-dasharray: 3715;
+}
+#goal-4:checked ~ .section-col-1 .section-svg-wrap svg.svg-path {
+  stroke-dashoffset: 2250;
+  stroke-dasharray: 3715;
+}
+#goal-5:checked ~ .section-col-1 .section-svg-wrap svg.svg-path {
+  stroke-dashoffset: 700;
+  stroke-dasharray: 3715;
+}
+#goal-6:checked ~ .section-col-1 .section-svg-wrap svg.svg-path {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 3715;
+}
+/*关键点位置标签样式*/
+.tooltip{
+  position: absolute;
+  display: block;
+  z-index: 100;
+  min-width: 160px;
+  padding: 15px;
+  border-radius: 6px;
+  background-color: #33a3dc;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 12px 35px 0 rgba(16, 31, 85, 0.35);
+  transform: translateX(-50%) rotate(-15deg); 
+  transform-origin: center top;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 350ms ease, transform 350ms ease;
+}
+/*关键点位置标签上的小箭头样式*/
+.tooltip:after{
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: '';
+  z-index: -1;
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent; 
+  border-bottom: 10px solid #33a3dc;
+  transition: border-bottom 200ms 100ms ease;
+}
+/*关键点位置标签上的小人图标样式*/
+.tooltip .bx{
+  margin: 0;
+  width: auto;
+  font-size: 20px;
+  margin-right: 3px;
+  transform: translateY(-1px);
+  color: #ffffff;
+}
+/*关键点位置标签位置*/
+.tooltip.goal-1{
+  top: 78%;
+  left: 47.5%;
+}
+.tooltip.goal-2{
+  top: 60%;
+  left: 22%;
+}
+.tooltip.goal-3{
+  top: 60%;
+  left: 17%;
+}
+.tooltip.goal-4{
+  top: 50%;
+  left: 30%;
+}
+.tooltip.goal-5{
+  top: 35%;
+  left: 33%;
+}
+/*
+.tooltip.goal-6{
+  top: 17%;
+  left: 24.9%;
+}
+*/
+#goal-1:checked ~ .section-col-1 .tooltip.goal-1,
+#goal-2:checked ~ .section-col-1 .tooltip.goal-2,
+#goal-3:checked ~ .section-col-1 .tooltip.goal-3,
+#goal-4:checked ~ .section-col-1 .tooltip.goal-4,
+#goal-5:checked ~ .section-col-1 .tooltip.goal-5,
+#goal-6:checked ~ .section-col-1 .tooltip.goal-6 {
+  transform: translateX(-50%) rotate(0); 
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 350ms 1300ms ease, transform 350ms 1300ms ease;
+}
+
+
+@media (max-width: 680px) {
+  .goal-btn:checked + label,
+  .goal-btn:not(:checked) + label{
+    width: 100%;
+    -ms-flex: 0 0 30%;
+    flex: 0 0 30%;
+    text-align: center;
+  }
+  .section-svg-wrap svg{
+    stroke-width: 10px;
+  }
+}
+@media (max-width: 450px) {
+  .goal-btn:checked + label,
+  .goal-btn:not(:checked) + label{
+    -ms-flex: 0 0 45%;
+    flex: 0 0 45%;
+  }
+  .tooltip.goal-1,
+  .tooltip.goal-2,
+  .tooltip.goal-3,
+  .tooltip.goal-4,
+  .tooltip.goal-5,
+  .tooltip.goal-6{
+    top: auto;
+    left: 50%;
+    bottom: -45px;
+  }
+  .tooltip:after{
+    display: none;
+  }
+  .tooltip{
+    transform: translate(-50%, 10px) rotate(0); 
+  }
+  #goal-1:checked ~ .section-col-1 .tooltip.goal-1,
+  #goal-2:checked ~ .section-col-1 .tooltip.goal-2,
+  #goal-3:checked ~ .section-col-1 .tooltip.goal-3,
+  #goal-4:checked ~ .section-col-1 .tooltip.goal-4,
+  #goal-5:checked ~ .section-col-1 .tooltip.goal-5,
+  #goal-6:checked ~ .section-col-1 .tooltip.goal-6 {
+    transform: translate(-50%, 0) rotate(0); 
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="section-fluid-main">
+
+	<div class="section-row">
+		<input class="goal-btn" type="radio" id="goal-1" name="goal-btn">
+		<label for="goal-1">园区入口</label> 
+		<input class="goal-btn" type="radio" id="goal-2" name="goal-btn">
+		<label for="goal-2">A1前台</label> 
+		<input class="goal-btn" type="radio" id="goal-3" name="goal-btn">
+		<label for="goal-3">A2展厅</label> 
+		<input class="goal-btn" type="radio" id="goal-4" name="goal-btn">
+		<label for="goal-4">B2餐厅</label> 
+		<input class="goal-btn" type="radio" id="goal-5" name="goal-btn">
+		<label for="goal-5">C1会议厅</label> 
+		<div class="section-col-1">
+			<div class="section">
+				<img src="https://cdn13.mudu.tv/assets/upload/editor/161473550573860.jpg" alt="">
+				<div class="section-svg-wrap">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1651" height="1080" viewBox="0 0 1651 1080" class="svg-path">
+						<path id="Path_1" data-name="Path 1" d="M875,1280L775,975L375,1085V775H300H400V650H475H400V450H550V400" fill="none">
+					</svg>
+					<div class="tooltip goal-1">
+						<p><i class='bx bx-walk'></i>100米</p>
+						<h6>园区入口</h6>
+					</div>
+					<div class="tooltip goal-2">
+						<p><i class='bx bx-walk'></i>50米</p>
+						<h6>A1前台</h6>
+					</div>
+					<div class="tooltip goal-3">
+						<p><i class='bx bx-walk'></i>75米</p>
+						<h6>A2展厅</h6>
+					</div>
+					<div class="tooltip goal-4">
+						<p><i class='bx bx-walk'></i>50米</p>
+						<h6>B2餐厅</h6>
+					</div>
+					<div class="tooltip goal-5">
+						<p><i class='bx bx-walk'></i>100米</p>
+						<h6>C1会议厅</h6>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
