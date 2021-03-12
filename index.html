@@ -1,4 +1,4 @@
-﻿
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -168,10 +168,18 @@ h6{
   stroke-dasharray: 3715;
 }
 #goal-5:checked ~ .section-col-1 .section-svg-wrap svg.svg-path {
-  stroke-dashoffset: 700;
+  stroke-dashoffset: 1500;
   stroke-dasharray: 3715;
 }
 #goal-6:checked ~ .section-col-1 .section-svg-wrap svg.svg-path {
+  stroke-dashoffset: 1000;
+  stroke-dasharray: 3715;
+}
+#goal-7:checked ~ .section-col-1 .section-svg-wrap svg.svg-path {
+  stroke-dashoffset: 700;
+  stroke-dasharray: 3715;
+}
+#goal-8:checked ~ .section-col-1 .section-svg-wrap svg.svg-path {
   stroke-dashoffset: 0;
   stroke-dasharray: 3715;
 }
@@ -238,18 +246,26 @@ h6{
   top: 35%;
   left: 33%;
 }
-/*
 .tooltip.goal-6{
-  top: 17%;
-  left: 24.9%;
+  top: 25%;
+  left: 25%;
 }
-*/
+.tooltip.goal-7{
+  top: 18%;
+  left: 18%;
+}
+.tooltip.goal-8{
+  top: 10%;
+  left: 15%;
+}
 #goal-1:checked ~ .section-col-1 .tooltip.goal-1,
 #goal-2:checked ~ .section-col-1 .tooltip.goal-2,
 #goal-3:checked ~ .section-col-1 .tooltip.goal-3,
 #goal-4:checked ~ .section-col-1 .tooltip.goal-4,
 #goal-5:checked ~ .section-col-1 .tooltip.goal-5,
-#goal-6:checked ~ .section-col-1 .tooltip.goal-6 {
+#goal-6:checked ~ .section-col-1 .tooltip.goal-6,
+#goal-7:checked ~ .section-col-1 .tooltip.goal-7,
+#goal-8:checked ~ .section-col-1 .tooltip.goal-8 {
   transform: translateX(-50%) rotate(0); 
   opacity: 1;
   pointer-events: auto;
@@ -280,7 +296,9 @@ h6{
   .tooltip.goal-3,
   .tooltip.goal-4,
   .tooltip.goal-5,
-  .tooltip.goal-6{
+  .tooltip.goal-6,
+  .tooltip.goal-7,
+  .tooltip.goal-8{
     top: auto;
     left: 50%;
     bottom: -45px;
@@ -296,7 +314,9 @@ h6{
   #goal-3:checked ~ .section-col-1 .tooltip.goal-3,
   #goal-4:checked ~ .section-col-1 .tooltip.goal-4,
   #goal-5:checked ~ .section-col-1 .tooltip.goal-5,
-  #goal-6:checked ~ .section-col-1 .tooltip.goal-6 {
+  #goal-6:checked ~ .section-col-1 .tooltip.goal-6,
+  #goal-7:checked ~ .section-col-1 .tooltip.goal-7,
+  #goal-8:checked ~ .section-col-1 .tooltip.goal-8{
     transform: translate(-50%, 0) rotate(0); 
   }
 }
@@ -308,43 +328,60 @@ h6{
 
 	<div class="section-row">
 		<input class="goal-btn" type="radio" id="goal-1" name="goal-btn">
-		<label for="goal-1">园区入口</label> 
+		<label for="goal-1">园区北门</label> 
 		<input class="goal-btn" type="radio" id="goal-2" name="goal-btn">
-		<label for="goal-2">A1前台</label> 
+		<label for="goal-2">C楼广场</label> 
 		<input class="goal-btn" type="radio" id="goal-3" name="goal-btn">
-		<label for="goal-3">A2展厅</label> 
+		<label for="goal-3">C1会议厅</label> 
 		<input class="goal-btn" type="radio" id="goal-4" name="goal-btn">
-		<label for="goal-4">B2餐厅</label> 
+		<label for="goal-4">B3宴会厅</label> 
 		<input class="goal-btn" type="radio" id="goal-5" name="goal-btn">
-		<label for="goal-5">C1会议厅</label> 
+		<label for="goal-5">A2展厅</label> 
+		<input class="goal-btn" type="radio" id="goal-6" name="goal-btn">
+		<label for="goal-6">A5咖啡吧</label> 
+		<input class="goal-btn" type="radio" id="goal-7" name="goal-btn">
+		<label for="goal-7">洗手间</label> 
+        <input class="goal-btn" type="radio" id="goal-8" name="goal-btn">
+		<label for="goal-8">电梯间</label> 
 		<div class="section-col-1">
 			<div class="section">
-				<img src="https://cdn13.mudu.tv/assets/upload/editor/161473550573860.jpg" alt="">
+				<img src="https://cdn13.mudu.tv/assets/upload/editor/161546343390834.png" alt="">
 				<div class="section-svg-wrap">
 					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1651" height="1080" viewBox="0 0 1651 1080" class="svg-path">
-						<path id="Path_1" data-name="Path 1" d="M875,1280L775,975L375,1085V775H300H400V650H475H400V450H550V400" fill="none">
+						<path id="Path_1" data-name="Path 1" d="M875,1280L775,975L375,1085V775H300H400V650H475H400V450H550V400H700V600H800V900" fill="none">
 					</svg>
 					<div class="tooltip goal-1">
 						<p><i class='bx bx-walk'></i>100米</p>
-						<h6>园区入口</h6>
+						<h6>园区北门</h6>
 					</div>
 					<div class="tooltip goal-2">
 						<p><i class='bx bx-walk'></i>50米</p>
-						<h6>A1前台</h6>
+						<h6>C楼广场</h6>
 					</div>
 					<div class="tooltip goal-3">
 						<p><i class='bx bx-walk'></i>75米</p>
-						<h6>A2展厅</h6>
+						<h6>C1会议厅</h6>
 					</div>
 					<div class="tooltip goal-4">
 						<p><i class='bx bx-walk'></i>50米</p>
-						<h6>B2餐厅</h6>
+						<h6>B3宴会厅</h6>
 					</div>
 					<div class="tooltip goal-5">
 						<p><i class='bx bx-walk'></i>100米</p>
-						<h6>C1会议厅</h6>
+						<h6>A2展厅</h6>
 					</div>
-
+					<div class="tooltip goal-6">
+						<p><i class='bx bx-walk'></i>100米</p>
+						<h6>A5咖啡吧</h6>
+					</div>                        
+					<div class="tooltip goal-7">
+						<p><i class='bx bx-walk'></i>100米</p>
+						<h6>洗手间</h6>
+					</div>
+					<div class="tooltip goal-8">
+						<p><i class='bx bx-walk'></i>100米</p>
+						<h6>电梯间</h6>
+					</div>
 				</div>
 			</div>
 		</div>
